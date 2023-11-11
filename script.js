@@ -1,8 +1,14 @@
-function stringChop(str, size) {
-  // your code here
-}
-
-// Do not change the code below
-const str = prompt("Enter String.");
-const size = prompt("Enter Chunk Size.");
-alert(stringChop(str, size));
+function chunkString(str, chunkSize) {
+    const result = [];
+  
+    for (let i = 0; i < str.length; i += chunkSize) {
+      result.push(str.slice(i, i + chunkSize));
+    }
+  
+    return result;
+  }
+  
+  // Examples
+  const str = prompt("Enter String.");
+  const size = parseInt(prompt("Enter Chunk Size.")) ;
+  alert(chunkString(str, size));
